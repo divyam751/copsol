@@ -1,0 +1,89 @@
+/* Navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1201;
+}
+
+.logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: none; /* Hidden by default on small screens */
+  cursor: pointer;
+}
+
+/* Hamburger menu styling */
+.hamburger {
+  cursor: pointer;
+  font-size: 1.8rem;
+  z-index: 1100;
+  display: block; /* Show hamburger by default */
+}
+
+/* Slider menu styling */
+.slider-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100%;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.3s ease;
+  z-index: 1200;
+}
+
+.slider-menu.open {
+  right: 0;
+}
+
+.slider-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.slider-content a {
+  display: block;
+  margin: 15px 0;
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.slider-content a:hover {
+  color: #aaa;
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex; /* Show links in a row on larger screens */
+    gap: 20px;
+  }
+
+  .hamburger {
+    display: none; /* Hide hamburger icon on larger screens */
+  }
+
+  .slider-menu {
+    display: none; /* Hide slider menu on larger screens */
+  }
+}
